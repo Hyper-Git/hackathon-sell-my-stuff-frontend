@@ -21,36 +21,42 @@ VITE_API_BASE_URL=http://localhost:8000
 ## Usage Examples
 
 ### Local Development
+
 ```bash
 VITE_API_BASE_URL=http://localhost:8000
 ```
 
 ### Production
+
 ```bash
 VITE_API_BASE_URL=https://api.your-api-domain.com
 ```
 
 ## Building for Production
 
-1. Set your environment variables in `.env`
-2. Build the frontend:
-   ```bash
-   npm run build
-   ```
-3. Deploy the `dist` folder to your hosting service
+1. Set your environment variables in `.env`.
+1. Build the frontend:
+
+```bash
+npm run build
+```
+
+1. Deploy the `dist` folder to your hosting service.
 
 **Note**: The API key input field will always be shown to users, ensuring no secrets are exposed in the build bundle.
 
 ## API Endpoint
 
 The frontend expects the backend to have an endpoint at:
-```
+
+```text
 POST {VITE_API_BASE_URL}/listings/analyze
 ```
 
 With the following request/response format:
 
 **Request:**
+
 ```json
 {
   "image": "data:image/jpeg;base64,..."
@@ -58,6 +64,7 @@ With the following request/response format:
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
