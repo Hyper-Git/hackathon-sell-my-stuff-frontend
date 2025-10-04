@@ -203,7 +203,7 @@ function App() {
                 
                 // Add API key to headers if provided
                 if (apiKey) {
-                  headers['Authorization'] = `Bearer ${apiKey}`;
+                  headers['x-api-key'] = apiKey;
                 }
                 
                 // Call our FastAPI endpoint
